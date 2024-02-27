@@ -56,6 +56,7 @@ namespace Elbotonmovible
             if (button1.Bottom >= ClientSize.Height)
             {
                 velocidadY = -velocidadY; // Cambia la dirección vertical para rebote
+                label1.Visible = false; //Quita el Nombre cuando llega abajo
             }
 
 
@@ -65,8 +66,8 @@ namespace Elbotonmovible
             else if (button1.Top <= 0)
             {
                 velocidadY = -velocidadY; // Cambia la dirección vertical para rebote
-                
-                    label1.Visible = true;
+             
+                label1.Visible = true;
             }
 
             ///////////////////////////////////////////////////////////////////////////////////////
@@ -92,7 +93,7 @@ namespace Elbotonmovible
             if (button2.Bottom >= ClientSize.Height)
             {
                 velocidadY1 = -velocidadY1; // Cambia la dirección vertical para rebote
-                BackColor = Color.DarkBlue;
+                BackColor = Color.LightBlue;
             }
 
             //Arriba

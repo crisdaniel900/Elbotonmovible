@@ -17,6 +17,7 @@ namespace Elbotonmovible
         private int velocidadX1 = 5;
         private int velocidadY1 = 5;
 
+
         public Form1()
         {
             InitializeComponent();
@@ -28,7 +29,8 @@ namespace Elbotonmovible
         {
             // Inicia el temporizador cuando se carga el formulario
             timer1.Start();
-            
+            label1.Visible = false; // Etiqueta Inicia como Falso para que no se vea
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -36,6 +38,7 @@ namespace Elbotonmovible
             // Mueve el botón
             button1.Left += velocidadX;
             button1.Top += velocidadY;
+            
 
             // Derecha
             if (button1.Right >= ClientSize.Width)
@@ -56,10 +59,14 @@ namespace Elbotonmovible
             }
 
 
+            
+
             //Arriba
             else if (button1.Top <= 0)
             {
                 velocidadY = -velocidadY; // Cambia la dirección vertical para rebote
+                
+                    label1.Visible = true;
             }
 
             ///////////////////////////////////////////////////////////////////////////////////////
@@ -98,6 +105,11 @@ namespace Elbotonmovible
         }
 
         private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
